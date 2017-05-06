@@ -1,0 +1,433 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<!-- Static navbar -->
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">88K工作網</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li class="dropdown-header">Nav header</li>
+                        <li><a href="#">Separated link</a></li>
+                        <li><a href="#">One more separated link</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="active"><a href="./">Default <span class="sr-only">(current)</span></a></li>
+                <li><a href="../navbar-static-top/">Static top</a></li>
+                <li><a href="../navbar-fixed-top/">Fixed top</a></li>
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div><!--/.container-fluid -->
+</nav>
+
+<!-- Main component for a primary marketing message or call to action -->
+<div class="jumbotron" >
+    
+    <h1>88K 工作網</h1>
+    <p> This example is a quick exercise to illustrate how the default, static navbar and fixed to top navbar work. It includes the responsive CSS and HTML, so it also adapts to your viewport and device.</p>
+     <p>
+        <a class="btn btn-lg btn-primary" href="../../components/#navbar" role="button">View navbar docs &raquo;</a>
+    </p>
+    
+    
+</div>
+<div class="row">
+<div class="col-sm-9 col-lg-8 col-lg-offset-2">
+    <form accept-charset="UTF-8" action="/jobs/search" class="jobs-search-form" method="get">
+        <div style="display:none"><input name="utf8" type="hidden" value="&#x2713;" /></div>
+
+
+        <div class="input-group">
+            <div class="col-md-5 col-md-push-7"><input type="text" class="form-control" name="q" value="" placeholder="搜尋工作關鍵字..."></div>
+            <span class="input-group-btn">
+                <button type="submit" class="btn btn-default">
+                    <span class="glyphicon glyphicon-search"></span>
+                </button>
+            </span>
+        </div>
+    </form>
+</div>
+
+<div class="col-sm-3 col-lg-2">
+    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+       點我查詢
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title" id="myModalLabel">有你真好 uni ～ </h4>
+                </div>
+                <div class="modal-body">
+                    <i class="fa fa-angellist fa-5x"></i>感謝您願意為高薪盡一份力。
+                    <i class="fa fa-free-code-camp  fa-5x" aria-hidden="true"></i>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-frown-o"></i> 鬼島是沒有高薪的</button>
+                    @*<button type="button"><a herf="@Url.Action("New")" class="btn btn-primary btn-lg"><i class="fa fa-smile-o"></i></a> 馬上來張貼好工作吧</button>*@
+                    <button type="button" class="btn btn-primary"><a href="@Url.Action("New")">馬上來張貼好工作吧</a></button>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+</div>
+</div>
+
+<div class="bs-example bs-example-tabs">
+    <ul id="myTab" class="nav nav-tabs" role="tablist">
+
+        <li>
+
+            <a data-toggle="tab" href="#category-0">視覺設計</a>
+        </li>
+        <li class="active">
+
+            <a data-toggle="tab" href="#category-1">程式設計</a>
+        </li>
+        <li>
+
+            <a data-toggle="tab" href="#category-2">網路行銷</a>
+        </li>
+        <li>
+
+            <a data-toggle="tab" href="#category-3">市場開發 / 業務</a>
+        </li>
+        <li>
+
+            <a data-toggle="tab" href="#category-4">網站內容編輯</a>
+        </li>
+        <li>
+
+            <a data-toggle="tab" href="#category-5">行銷 / 企劃</a>
+        </li>
+        <li>
+
+            <a data-toggle="tab" href="#category-6">其他</a>
+        </li>
+        <li>
+
+            <a data-toggle="tab" href="#category-7">醫療</a>
+        </li>
+        <li>
+
+            <a data-toggle="tab" href="#category-8">電子業</a>
+        </li>
+    </ul>
+    <div id="myTabContent" class="tab-content">
+
+
+        <div class=" tab-pane fade in" id="category-0">
+
+
+            <h3> <a href="/categories/1" style="color: black;">視覺設計</a> <a href="/categories/1.rss"><img alt="Rss feed" src="/images/rss-feed.png" /></a> </h3>
+
+
+
+            <table class="table table-borderd"></table>
+        </div>
+        <div class="active tab-pane fade in" id="category-1">
+
+
+            <h3> <a href="/categories/2" style="color: black;">程式設計</a> <a href="http://getbootstrap.com/components/#nav-tabs"><span class="glyphicon glyphicon-align-left" aria-hidden="true"></span></a> </h3>
+
+
+
+            <table class="table table-borderd">
+
+                <tr>
+
+                    <td width="80%">
+
+
+                        代遊戲軟體代理商 -
+                        <a href="http://www.66kjobs.tw/jobs/1746">[台北中山]遊戲軟體代理商 徵 PM專案管理師, 60k~100k</a>
+
+                    </td>
+                    <td width="5%">
+                        <span class="label label-danger">新台幣 $100,000 元</span>
+                    </td>
+                    <td> 20 Apr </td>
+                </tr>
+                <tr>
+
+                    <td width="80%">
+
+
+                        代遊戲軟體代理商 -
+                        <a href="http://www.66kjobs.tw/jobs/1745">[台北中山] 遊戲軟體代理商 徵 .NET開發工程師, NT$60k~100k</a>
+
+                    </td>
+                    <td width="5%">
+                        <span class="label label-primary">新台幣 $100,000 元</span>
+                    </td>
+                    <td> 20 Apr </td>
+                </tr>
+                <tr>
+
+                    <td width="80%">
+
+
+                        代遊戲軟體代理商 -
+                        <a href="http://www.66kjobs.tw/jobs/1744">[台北中山] 遊戲軟體代理商 徵 Android開發工程師, NT$60k~100k</a>
+
+                    </td>
+                    <td width="5%">
+                        <span class="label label-default label-success">新台幣 $100,000 元</span>
+                    </td>
+                    <td> 20 Apr </td>
+                </tr>
+                <tr>
+
+                    <td width="80%">
+
+
+                        代遊戲軟體代理商 -
+                        <a href="http://www.66kjobs.tw/jobs/1743">[台北中山] 遊戲軟體代理商 徵 iOS開發工程師, NT$60k~100k</a>
+
+                    </td>
+                    <td width="5%">
+                        <span class="label label-info">新台幣 $100,000 元</span>
+                    </td>
+                    <td> 20 Apr </td>
+                </tr>
+                <tr>
+
+                    <td width="80%">
+
+
+                        MyCoach -
+                        <a href="http://www.66kjobs.tw/jobs/1742">新創公司誠徵Android,IOS軟體開發工程師</a>
+                        [最低薪 &lt; 35000 請自行斟酌是否應徵此公司]
+                    </td>
+                    <td width="5%">
+                        <span class="label label-default ">新台幣 $70,000 元</span>
+                    </td>
+                    <td> 19 Apr </td>
+                </tr>
+                <tr>
+
+                    <td width="80%">
+
+
+                        R&amp;W -
+                        <a href="http://www.66kjobs.tw/jobs/1735">App Leader (Senior PM)</a>
+
+                    </td>
+                    <td width="5%">
+                        <span class="label label-info">新台幣 $150,000 元</span>
+                    </td>
+                    <td> 10 Apr </td>
+                </tr>
+                <tr>
+
+                    <td width="80%">
+
+
+                        鴻華國際科技股份有限公司 -
+                        <a href="http://www.66kjobs.tw/jobs/1733">iOS Senior Software Engineer</a>
+
+                    </td>
+                    <td width="5%">
+                        <span class="label label-success ">新台幣 $80,000 元</span>
+                    </td>
+                    <td>  4 Apr </td>
+                </tr>
+
+
+            </table>
+        </div>
+        <div class=" tab-pane fade in" id="category-2">
+
+
+            <h3> <a href="/categories/3" style="color: black;">網路行銷</a> <a href="/categories/3.rss"><img alt="Rss feed" src="/images/rss-feed.png" /></a> </h3>
+
+
+
+            <table class="table table-borderd"></table>
+        </div>
+        <div class=" tab-pane fade in" id="category-3">
+
+
+            <h3> <a href="/categories/4" style="color: black;">市場開發 / 業務</a> <a href="/categories/4.rss"><img alt="Rss feed" src="/images/rss-feed.png" /></a> </h3>
+
+
+
+            <table class="table table-borderd">
+
+
+                <tr>
+
+                    <td width="80%">
+
+
+                        http://gopaktor.com/index.zh.html#/home -
+                        <a href="http://www.66kjobs.tw/jobs/1734">iOS engineer(Lab-G)</a>
+
+                    </td>
+                    <td width="5%">
+                        <span class="label label-warning ">新台幣 $80,000 元</span>
+                    </td>
+                    <td> 10 Apr </td>
+                </tr>
+
+
+            </table>
+        </div>
+        <div class=" tab-pane fade in" id="category-4">
+
+
+            <h3> <a href="/categories/5" style="color: black;">網站內容編輯</a> <a href="/categories/5.rss"><img alt="Rss feed" src="/images/rss-feed.png" /></a> </h3>
+
+
+
+            <table class="table table-borderd"></table>
+        </div>
+        <div class=" tab-pane fade in" id="category-5">
+
+
+            <h3> <a href="/categories/6" style="color: black;">行銷 / 企劃</a> <a href="/categories/6.rss"><img alt="Rss feed" src="/images/rss-feed.png" /></a> </h3>
+
+
+
+            <table class="table table-borderd"></table>
+        </div>
+        <div class=" tab-pane fade in" id="category-6">
+
+
+            <h3> <a href="/categories/7" style="color: black;">其他</a> <a href="/categories/7.rss"><img alt="Rss feed" src="/images/rss-feed.png" /></a> </h3>
+
+
+
+            <table class="table table-borderd">
+
+
+                <tr>
+
+                    <td width="80%">
+
+
+                        日玖人力資源顧問有限公司 -
+                        <a href="http://www.66kjobs.tw/jobs/1747">【日本在地工作】QA工程師 / 測試工程師</a>
+
+                    </td>
+                    <td width="5%">
+                        <span class="label label-danger">新台幣 $200,000 元</span>
+                    </td>
+                    <td> 26 Apr </td>
+                </tr>
+                <tr>
+
+                    <td width="80%">
+
+
+                        Taroko Software  -
+                        <a href="http://www.66kjobs.tw/jobs/1737">Associate Product Manager </a>
+
+                    </td>
+                    <td width="5%">
+                        <span class="label label-danger">新台幣 $80,000 元</span>
+                    </td>
+                    <td> 14 Apr </td>
+                </tr>
+
+
+            </table>
+        </div>
+        <div class=" tab-pane fade in" id="category-7">
+
+
+            <h3> <a href="/categories/8" style="color: black;">醫療</a> <a href="/categories/8.rss"><img alt="Rss feed" src="/images/rss-feed.png" /></a> </h3>
+
+
+
+            <table class="table table-borderd"></table>
+        </div>
+        <div class=" tab-pane fade in" id="category-8">
+
+
+            <h3> <a href="/categories/9" style="color: black;">電子業</a> <a href="/categories/9.rss"><img alt="Rss feed" src="/images/rss-feed.png" /></a> </h3>
+
+
+
+            <table class="table table-borderd"></table>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=710686532311958";
+
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+<div id="modal-from-dom" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modal-from-dom-label" aria-hidden="true">
+
+</div>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-52771099-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+@*<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="myModalLabel">有你真好 uni ～ </h4>
+            </div>
+            <div class="modal-body">
+                <i class="fa fa-angellist fa-5x"></i>感謝您願意為高薪盡一份力。
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-frown-o"></i> 鬼島是沒有高薪的</button>
+                <button type="button" class="btn btn-primary btn-lg"><i class="fa fa-smile-o"></i> 馬上來張貼好工作吧</button>
+            </div>
+        </div>
+    </div>
+</div>*@
+
+
